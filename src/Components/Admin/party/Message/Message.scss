@@ -1,0 +1,104 @@
+.message__content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    .avatar__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        transition: transform 0.3s ease;
+    }
+    img{
+        width: 40px;
+        border-radius: 10px;
+    }
+    .message__dialog{
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.1s ease;
+        .message__dialog__head{
+            display: flex;
+            justify-content: space-around;
+            h4,h5{
+                margin: 0;
+            }
+            h4{
+                color: #fff;
+                font-weight: 100;
+                font-size: 13px;
+            }
+            h5{
+                color: #60639b;
+            }
+        }
+        h4{
+            margin: 0;
+            color: #60639b;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+}
+
+.message__content:hover {
+    cursor: pointer;
+    transform: scale(1.05) translate(-10px);
+    box-shadow: 10px 0px 10px #4F7CFF;
+}
+
+.message__content:hover .avatar__content,.message__content:hover .message__dialog{
+    transform: scaleX(1) scaleY(1) scaleZ(1.3) rotateX(11deg) rotateY(-32deg) rotateZ(1deg) translateX(0px) translateY(-8px) translateZ(4px) skewX(0deg) skewY(0deg);
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
+    // box-shadow: 10px 10px 30px #2E325C;
+}
+
+.message__div{
+    margin: 12px 15px;
+    height: 0.01rem;
+    background: #60639b67;
+
+}
+
+.searching__content{
+    width: 100%;
+    .message__content__search{
+        width: 100%;
+    }
+    .message{
+        width: 80%;
+        padding: 16px 29px;
+        // padding-left: 4px;
+        // padding-top: 20px;
+        // padding-bottom: 20px;
+        background: #282B51;
+        border: 0;
+        outline: none;
+        font-size: 15px;
+        color: #4F7CFF;
+    }
+    .searching__content__botton{
+        // margin-top: 20px;
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom-left-radius:20px ;
+        border-bottom-right-radius:20px ;
+        background: #2E325C;
+        .button__search{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #4F7CFF;
+            border-radius: 20px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

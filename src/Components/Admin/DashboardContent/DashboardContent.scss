@@ -1,0 +1,329 @@
+$color_fondo_dash:#2D325A;
+$background:rgb(125, 116, 253);
+$color-card:#fff;
+$background_container:#2D325A;
+
+$backgroundSidebar:#2D325A;
+$color:rgb(83, 149, 255);
+$font-family:'fantasy';
+$boxShadowSide: 0px 10px 40px rgba(104, 104, 104, 0.63);
+// hover
+$backgroundHover:rgb(125, 116, 253);
+// background cards buton dash
+$colo1:#4F7BFF;
+$colo2:#7133FF;
+$colo3:#F75165;
+
+.dashboard__container{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 20px;
+    background-color: $background_container;
+    position: relative;
+    .dashboard__navbar{
+        margin-top: 8px;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .dashboard__nav{
+            width: auto;
+            display: flex;
+            img{
+                display: block;
+                width: 35px;
+                height: 35px;
+                transition: transform 0.3s ease;
+            }
+            img:hover{
+                color: #fff;
+                filter: drop-shadow(5px 5px 20px rgba(255, 255, 255, 0.616));
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+        .points__nav{
+            display: flex;
+            width: auto;
+            width: 250px;
+            margin-right: 10px;
+            justify-content: center;
+            align-items: center;
+            button{
+                margin-right: 10px;
+                outline: none;
+                border: none;
+                color: #fff;
+                border: 2px solid #4868D8;
+                width: 80px;
+                height: 50px;
+                border-radius: 20px;
+                background: #2D325A;
+                transition: border 0.3s, cursor 0.3s;
+            }
+            button:hover{
+                cursor: pointer;
+                border: 2px solid #5e81ff;
+            }
+            .cantidad{
+                margin-left: 5px;
+                color: #fff;
+            }
+            .money__type{
+                color: $color;
+            }
+
+            img{
+                display: block;
+                width: 35px;
+                height: 35px;
+            }
+            img:hover{
+                color: #fff;
+                filter: drop-shadow(5px 5px 20px rgba(255, 255, 255, 0.616));
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+    .dash__information{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        img{
+            width: 200px;
+            height: 80px;
+            transform: scaleX(-1) rotate(-20deg);
+            filter: drop-shadow(10px 10px 10px #000);
+            transition: transform 0.3s ease;
+        }
+        img:hover{
+            transform: scaleX(-1.5) scaleY(1.5);
+            cursor: pointer;
+        }
+        .dash__card__info{
+            display: flex;
+            flex-direction: column;
+            margin-left:30px ;
+            color: #4868D8;
+            h3,h4{
+                margin: 0;
+            }
+            .payments{
+                margin-top: 10px;
+                display: flex;
+                h3{
+                    color: #fff;
+                }
+                span{
+                    color:#37aad8
+                }
+            }
+            .buttons{
+                margin-top: 20px;
+                button{
+                    padding: 10px 20px;
+                    margin-right: 10px;
+                    color: #fff;
+                    background: #202342;
+                    border-radius: 10px;
+                    border: none;
+                    border: 2px solid transparent;
+                }
+                button:hover{
+                    border: 2px solid $color;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.dashboard__buttons{
+    width: 95%;
+    height: 200px;
+    background-color: $color_fondo_dash;
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.button__dash{
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    background: $background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-card;
+    box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.582);
+    transition: background 0.3s ease, transform 0.3s ease;
+    h3{
+        font-size: 50px;
+        // transform: translateX(10px) translateY(-10px) translateZ(20px);
+        transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(20deg) rotateZ(11deg) translateX(0px) translateY(-17px) translateZ(0px) skewX(0deg);
+        perspective: 1000px;
+        margin: 0;
+        text-shadow: 10px 10px 20px rgba(167, 167, 167, 0.787);
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+    span{
+        font-size: 12px;
+    }
+}
+.button__dash:nth-child(1){
+    background: $colo1;
+    h3{
+        color: darken($color: $colo1, $amount: 10);
+    }
+}
+.button__dash:nth-child(2){
+    background: $colo2;
+    h3{
+        color: darken($color: $colo2, $amount: 10);
+    }
+}
+.button__dash:nth-child(3){
+    background: $colo3;
+    h3{
+        color: darken($color:$colo3, $amount: 10);
+    }
+}
+.button__dash:hover{
+    background: darken($color: $background, $amount: 10);
+    color: darken($color: $color-card, $amount: 10);
+    cursor: pointer;
+}
+
+.button__dash:hover i{
+    transform: scale(1.2) rotate(20deg);
+}
+
+.button__dash:hover h3{
+    // animation: movimenty 0.6s ease infinite alternate;
+    transform: scale(1.4) rotate(20deg) translateY(-30px);
+}
+
+.dash__cards__items{
+    width: 100%;
+    height: auto;
+    .dash__card__item{
+        margin-top: 20px;
+        margin-left:10px;
+        margin-right: 10px;
+        height: 170px;
+        background: #2E325C;
+        box-shadow: 0px 5px 40px #1a1e36;
+        border-radius: 20px;
+        .dash__item__content{
+            display: flex;
+            width: auto;
+            height: 100%;
+            align-items: center;
+            justify-content: space-around;
+            img:nth-child(1){
+                width: 50px;
+                height: 50px;
+                background: rgb(164, 95, 255);
+                border-radius: 20px;
+            }
+            .raised__money{
+                h5,h4{
+                    margin: 0;
+                }
+                h5{
+                    color: #5e81ff;
+                }
+                h4{
+                    color: #fff;
+                }
+            }
+            .gun__favorite{
+                width: 40px;
+                transition: transform 0.3s ease;
+            }
+            .gun__favorite:hover,.people:hover{                
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+            .people{
+                transition: transform 0.3s ease;
+            }
+        }
+        button{
+            padding: 10px 20px;
+            margin-right: 10px;
+            color: #fff;
+            background: #202342;
+            border-radius: 10px;
+            border: none;
+            border: 2px solid transparent;
+        }
+        button:hover{
+            border: 2px solid $color;
+            cursor: pointer;
+        }
+    }
+    .dash__title__items{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 20px;
+        height: 45px;
+        color: #777CAC;
+        .container__icons__title{
+            display: flex;
+            align-items: center;
+            img{
+                width: 20px;
+            }
+            h5{
+                margin: 0;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+.dashboard__graphic{
+    margin-top:25px ;
+    width: 95%;
+    height: 60%;
+    border-radius: 20px;
+    background-color: $color_fondo_dash;
+    box-shadow: -10px 10px 30px rgba(153, 153, 153, 0.582);
+}
+
+.dashboard__graphic:hover{
+    cursor: pointer;
+}
+canvas{
+    width: 100%;
+    height: 500px;
+}
+
+@keyframes moviment {
+    0%{
+        transform: rotate(10deg) translate(-20px);
+    }100%{
+        transform: rotate(-10deg) translate(20px);
+    }
+}
+
+@keyframes movimenty{
+    0%{
+        transform: rotate(-20deg) translateY(-10px) translateX(10px);
+    }100%{
+        transform: rotate(20deg) translateY(-10px) translateX(10px);
+    }
+}

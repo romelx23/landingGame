@@ -1,0 +1,90 @@
+// $backgroundAdmin:rgba(52, 99, 255, 0.808);
+$backgroundAdmin: #25294C;
+
+.container__dashboard{
+    width: 100%;
+    height: 100vh;
+    background-color: $backgroundAdmin;
+    // display: grid;
+    // grid-template-columns: 1fr 2fr 1fr;
+    position: relative;
+    .decoration__container{
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+    }
+    .circle__decoration1,
+    .circle__decoration2,
+    .circle__decoration3,
+    .circle__decoration4,
+    .circle__decoration5
+    {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+    .circle__decoration1{
+        background-color: rgb(253, 106, 106);
+        filter: blur(45px);
+        mix-blend-mode: multiply;
+        opacity: .4;
+        animation: decoration__animation 3s alternate infinite;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+        // transition: ani;
+    }
+    .circle__decoration2{
+        background-color: rgb(250, 238, 66);
+        position: absolute;
+        left: 150px;
+        top: 150px;
+        mix-blend-mode: multiply;
+        filter: blur(45px);
+        opacity: .4;
+        animation: decoration__animation 3s alternate infinite;
+    }
+    .circle__decoration3{
+        background-color: rgb(106, 253, 130);
+        mix-blend-mode: multiply;
+        filter: blur(45px);
+        opacity: .4;
+        animation: decoration__animation 4s alternate infinite;
+    }
+    .circle__decoration4{
+        background-color: rgb(106, 224, 253);
+        position: absolute;
+        left: 450px;
+        top: 150px;
+        mix-blend-mode: multiply;
+        filter: blur(45px);
+        opacity: .4;
+        animation: decoration__animation 4.5s alternate infinite;
+    }
+    .circle__decoration5{
+        background-color: rgb(128, 106, 253);
+        mix-blend-mode: multiply;
+        filter: blur(45px);
+        opacity: .4;
+        animation: decoration__animation 5s alternate infinite;
+    }
+
+}
+
+.container__components{
+    width: 100%;
+    height: 100vh;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+@keyframes decoration__animation{
+    0%{
+        transform: scale(.9);
+    }50%{
+        transform: scale(1);
+    }100%{
+        transform: scale(1.3);
+    }
+}
