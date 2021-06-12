@@ -168,6 +168,7 @@ $colo3:#F75165;
     color: $color-card;
     box-shadow: 0px 10px 30px rgba(153, 153, 153, 0.582);
     transition: background 0.3s ease, transform 0.3s ease;
+    animation: entrada 1s ease-in-out;
     h3{
         font-size: 50px;
         // transform: translateX(10px) translateY(-10px) translateZ(20px);
@@ -231,6 +232,7 @@ $colo3:#F75165;
             height: 100%;
             align-items: center;
             justify-content: space-around;
+            animation: entrada 1s ease-in-out;
             img:nth-child(1){
                 width: 50px;
                 height: 50px;
@@ -325,5 +327,15 @@ canvas{
         transform: rotate(-20deg) translateY(-10px) translateX(10px);
     }100%{
         transform: rotate(20deg) translateY(-10px) translateX(10px);
+    }
+}
+
+@keyframes entrada{
+    0%{
+        opacity: .1;
+        transform: scale(0.5);
+    }100%{
+        opacity: 1;
+        transform: scale(1);
     }
 }

@@ -12,6 +12,7 @@ $backgroundAdmin: #25294C;
         display: flex;
         flex-wrap: wrap;
         position: absolute;
+        z-index: -10;
     }
     .circle__decoration1,
     .circle__decoration2,
