@@ -7,7 +7,7 @@ $backgroundHover:rgb(125, 116, 253);
 
 .sidebar__content{
     // max-width: 25vw;
-    width: 30vw;
+    // width: 30vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -248,8 +248,8 @@ $backgroundHover:rgb(125, 116, 253);
     font-weight: 400;
     position: relative;
     border-radius: 20px;
-    padding-left: 20px;
     .container__foot{
+        padding-left: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;

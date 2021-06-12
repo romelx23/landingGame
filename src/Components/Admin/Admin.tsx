@@ -7,13 +7,13 @@ import { Party } from './party/Party';
 export const Admin = () => {
   return (
     <div className="container__dashboard">
-      <div className="decoration__container">
+      {/* <div className="decoration__container">
         <div className="circle__decoration1"></div>
         <div className="circle__decoration2"></div>
         <div className="circle__decoration3"></div>
         <div className="circle__decoration4"></div>
         <div className="circle__decoration5"></div>
-      </div>
+      </div> */}
       <div className="container__components">
         <SidebarAdmin/>
         <DashboardContent/>
