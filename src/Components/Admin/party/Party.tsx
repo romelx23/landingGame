@@ -1,8 +1,6 @@
 import React from 'react'
 import '../party/Party.scss'
 import { MessageComponent } from './Message/Message';
-import user from "../../../assets/imgs/user.svg";
-import arrow from "../../../assets/imgs/arrow.svg";
 
 export const Party = () => {
     return (
